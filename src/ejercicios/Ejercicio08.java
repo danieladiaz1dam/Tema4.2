@@ -13,22 +13,21 @@ package ejercicios;
  */
 public class Ejercicio08 {
 	public static boolean esPalindroma(String frase) {
-		String[] palabras = frase.split(" ");
-		int i = 0;
-		boolean palindroma = true;
+		String fraseSinEspacios = frase.toLowerCase().replace(" ", "");
+		String fraseAlReves = "";
 		
-		while (palindroma && i < palabras.length / 2) {
-			if (palabras[i] != palabras[palabras.length-1-i])
-				palindroma = false;
-			
-			i++;
+		for (int i = fraseSinEspacios.length() - 1; i >= 0; i--) {
+			fraseAlReves += fraseSinEspacios.charAt(i);
 		}
 		
-		return palindroma;
+		System.out.println(fraseSinEspacios);
+		System.out.println(fraseAlReves);
+		
+		return fraseSinEspacios.equals(fraseAlReves);
 	}
 	
 	public static void main(String[] args) {
-		final String frase = "Esta frase no es palidroma";
+		final String frase = "Dabale arroz a la zorra el abad";
 		System.out.println(esPalindroma(frase));
 	}
 }

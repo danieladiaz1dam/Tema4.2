@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>helper.jar</name>
-			<type>1</type>
-			<location>/home/daniela/Documents/helper.jar</location>
-		</link>
-	</linkedResources>
 </projectDescription>

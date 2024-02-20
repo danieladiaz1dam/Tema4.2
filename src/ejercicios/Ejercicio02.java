@@ -1,7 +1,6 @@
 package ejercicios;
 
 import java.util.Scanner;
-import helper.Helper;
 
 /**
  * Ejercicio02
@@ -34,7 +33,7 @@ public class Ejercicio02 {
 		password = sc.nextLine();
 		
 		// Inicializar guessed
-		guessed = Helper.RED + "?".repeat(password.length()) + Helper.RESET;
+		guessed = "\u001B[31m" + "?".repeat(password.length()) + "\u001B[0m";
 		
 		System.out.println(guessed);
 		
@@ -57,11 +56,11 @@ public class Ejercicio02 {
 			guessed = "";
 			for (int i = 0; i < password.length(); i++) {
 				if (password.charAt(i) == input.charAt(i))
-					guessed += Helper.GREEN + password.charAt(i);
+					guessed += "\u001B[32m" + password.charAt(i);
 				else
-					guessed += Helper.RED + "?";
+					guessed += "\u001B[31m" + "?";
 			}
-			guessed += Helper.RESET;
+			guessed += "\u001B[0m";
 			
 			System.out.println(guessed);
 		}
